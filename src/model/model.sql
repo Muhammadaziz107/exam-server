@@ -34,3 +34,15 @@ create table cart(
      product_id int references product(product_id),
      user_id int references users(user_id)
 );
+
+create table orders(
+     order_id serial primary key,
+     user_name varchar(64) not null,
+     order_address varchar(128) not null,
+     user_phone varchar(64) not null,
+     is_confirm boolean default false
+);
+
+
+
+
